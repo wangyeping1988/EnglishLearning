@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InputWord</title>
+</head>
+<body>
+    <div>
+        <span>Word:</span><input type="text" id="word" />
+        <span>Meaning:</span><input type="text" id="meaning" />
+        <span>ExampleSentence:</span><input type="text" id="exampleSentence" />
+        <input type="button" id="btnSubmit" value="submit">
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Content/Scripts/Home/InputWord.js" type="text/javascript"></script>
+</body>
+</html>

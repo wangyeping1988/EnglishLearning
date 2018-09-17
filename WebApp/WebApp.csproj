@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApp</RootNamespace>
-    <AssemblyName>WebApp</AssemblyName>
+    <RootNamespace>EnglishLearning.WebApp</RootNamespace>
+    <AssemblyName>EnglishLearning.WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -158,6 +158,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\WordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -165,31 +166,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Scripts\Home\InputWord.js" />
+    <Content Include="Content\Styles\bootstrap.css" />
+    <Content Include="Content\Styles\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Styles\Site.css" />
+    <Content Include="Content\Scripts\Default\ai.0.22.9-build00167.js" />
+    <Content Include="Content\Scripts\Default\ai.0.22.9-build00167.min.js" />
+    <Content Include="Content\Scripts\Default\bootstrap.js" />
+    <Content Include="Content\Scripts\Default\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <None Include="Content\Scripts\Default\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\Scripts\Default\jquery-1.10.2.js" />
+    <Content Include="Content\Scripts\Default\jquery-1.10.2.min.js" />
+    <None Include="Content\Scripts\Default\jquery.validate-vsdoc.js" />
+    <Content Include="Content\Scripts\Default\jquery.validate.js" />
+    <Content Include="Content\Scripts\Default\jquery.validate.min.js" />
+    <Content Include="Content\Scripts\Default\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\Scripts\Default\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\Scripts\Default\modernizr-2.6.2.js" />
+    <Content Include="Content\Scripts\Default\respond.js" />
+    <Content Include="Content\Scripts\Default\respond.min.js" />
+    <Content Include="Content\Scripts\Default\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -201,18 +203,34 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\InputWord.cshtml" />
+    <None Include="Properties\PublishProfiles\publish.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\Scripts\Default\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{e54c489c-fe1c-4ac2-89ca-8a7bec38a737}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dal.EntityFrameworkDal\EntityFrameworkDal.csproj">
+      <Project>{9e703f0d-dbb0-482b-b2dc-2a7c04c0d801}</Project>
+      <Name>EntityFrameworkDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{9466830B-F89F-4FAC-A522-990B3B0EDFAB}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
