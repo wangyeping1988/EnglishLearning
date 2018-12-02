@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Slides from '@/components/Slides'
+import Login from '@/components/Login'
+import Photos from '@/components/Photos'
+import Videos from '@/components/Videos'
+import EnglishLearning from '@/components/EnglishLearning'
 
 Vue.use(Router)
 
@@ -9,13 +11,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Slides',
-      component: Slides
+      name: 'Login',
+      component: Login
     },
     {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/Photos',
+      name: 'Photos',
+      component: Photos
+    },
+    {
+      path: '/Videos',
+      name: 'Videos',
+      component: Videos
+    },
+    {
+      path: '/EnglishLearning',
+      name: 'EnglishLearning',
+      component: EnglishLearning
     }
   ]
 })

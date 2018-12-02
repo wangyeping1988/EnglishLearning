@@ -1,6 +1,6 @@
 <template>
   <!-- <el-carousel indicator-position="outside" :height="bannerHeight + 'px'"> -->
-  <el-carousel indicator-position="outside">
+  <el-carousel arrow="always" indicator-position="outside" height='500px'>
     <el-carousel-item v-for="(item,index) in 4" :key=index>
       <img src="../assets/images/banner1.jpg" v-if="index == 0" class="bannerImg" />
       <img src="../assets/images/banner2.jpg" v-if="index == 1" class="bannerImg" />
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Slides',
+  name: 'Photos',
   methods: {
     // setSize: function () {
     //   this.bannerHeight = 740 / 2560 * this.screenWidth
