@@ -158,6 +158,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Biz\AuthorizeAttribute.cs" />
+    <Compile Include="Biz\CookiesManage.cs" />
+    <Compile Include="Biz\JsonExtension.cs" />
+    <Compile Include="Biz\StringExtension.cs" />
+    <Compile Include="Controllers\Api\AccountController.cs" />
     <Compile Include="Controllers\Api\WordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -231,6 +236,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{9466830B-F89F-4FAC-A522-990B3B0EDFAB}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util.Log.Log4netLogger\Log4netLogger.csproj">
+      <Project>{54d80ac8-1614-4f0d-a287-5882f7dfa2bc}</Project>
+      <Name>Log4netLogger</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

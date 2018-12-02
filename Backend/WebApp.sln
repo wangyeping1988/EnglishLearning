@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{9466830B-F89F-4FAC-A522-990B3B0EDFAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4netLogger", "Util.Log.Log4netLogger\Log4netLogger.csproj", "{54D80AC8-1614-4F0D-A287-5882F7DFA2BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9466830B-F89F-4FAC-A522-990B3B0EDFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9466830B-F89F-4FAC-A522-990B3B0EDFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9466830B-F89F-4FAC-A522-990B3B0EDFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D80AC8-1614-4F0D-A287-5882F7DFA2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D80AC8-1614-4F0D-A287-5882F7DFA2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D80AC8-1614-4F0D-A287-5882F7DFA2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D80AC8-1614-4F0D-A287-5882F7DFA2BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
